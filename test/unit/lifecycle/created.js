@@ -21,8 +21,8 @@ describe('lifecycle/created', function () {
     helperElement().skate({
       created: test('created'),
       events: {
-        someNonStandardEvent (e) {
-          order.push(`${e.detail}.event`);
+        someNonStandardEvent (elem, data) {
+          order.push(`${data.detail}.event`);
         }
       },
       prototype: {
